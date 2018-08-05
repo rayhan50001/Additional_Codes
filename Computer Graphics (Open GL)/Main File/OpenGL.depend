@@ -1,0 +1,117 @@
+# depslib dependency file v1.0
+1474044491 source:c:\users\user\downloads\compressed\setup opengl\opengl\opengl_codeblocks\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+	<glut.h>
+
+1392007564 c:\users\user\downloads\compressed\setup opengl\opengl\opengl_codeblocks\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1476632425 source:c:\users\user\desktop\opengl_codeblocks\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<vector>
+	<windows.h>
+	<glut.h>
+	<algorithm>
+	<stack>
+	<iostream>
+	<fstream>
+
+1392007564 c:\users\user\desktop\opengl_codeblocks\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1477263998 source:c:\users\user\desktop\opengl_make_input\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<vector>
+	<windows.h>
+	<glut.h>
+	<algorithm>
+	<stack>
+	<iostream>
+	<fstream>
+
+1392007564 c:\users\user\desktop\opengl_make_input\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1481391873 source:c:\users\user\desktop\assignment 4\main.cpp
+	<fstream>
+	<iostream>
+	<iomanip>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+	<vector>
+	<glut.h>
+	<cstring>
+	<algorithm>
+	"bitmap_image.hpp"
+
+1392007564 c:\users\user\desktop\assignment 4\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1477954050 c:\users\user\desktop\assignment 4\bitmap_image.hpp
+	<algorithm>
+	<cmath>
+	<cstdlib>
+	<fstream>
+	<iostream>
+	<iterator>
+	<limits>
+	<string>
+
+1518899907 source:c:\users\user\desktop\graphics_lab\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+	<glut.h>
+	<iostream>
+
+1392007564 c:\users\user\desktop\graphics_lab\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1518899907 source:c:\users\mta\desktop\graphics_lab\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+	<glut.h>
+	<iostream>
+
+1392007564 c:\users\mta\desktop\graphics_lab\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1520710428 source:d:\lab\graphics_lab_student(1st lab)\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<bits/stdc++.h>
+	<windows.h>
+	<glut.h>
+	<iostream>
+
+1520710232 d:\lab\graphics_lab_student(1st lab)\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+

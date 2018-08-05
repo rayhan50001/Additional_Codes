@@ -1,0 +1,107 @@
+1)
+.data
+.code 
+main proc
+mov ah,1
+int 21h
+mov dl,al
+mov ah,2
+int 21h
+main endp
+end main
+2)
+.data
+.code
+main proc
+mov ah,1
+int 21h
+sub al,32
+mov dl,al
+mov ah,2
+int 21h
+main endp
+end main
+3)
+.data
+.code 
+main proc
+mov ah,1
+int 21h
+mov bl,al
+mov dl,bl
+mov ah,2
+int 21h
+main endp
+end main
+4)
+.data
+.code 
+main proc
+mov ah,1
+int 21h
+mov bl,al
+mov ah,1
+int 21h
+mov cl,al
+mov dl,cl
+mov ah,2
+int 21h
+mov dl,bl
+mov ah,2
+int 21h
+main endp
+end main
+5)
+.data
+.code 
+main proc
+mov ah,1
+int 21h
+mov bl,al
+mov cl,al
+sub bl,1
+add cl,1
+mov dl,bl
+mov ah,2
+int 21h
+mov dl,cl
+mov ah,2
+int 21h
+main endp
+end main
+6)
+.data
+.code 
+main proc
+mov ah,1
+int 33D
+mov bl,al
+mov ah,1
+int 33D
+mov cl,al
+add cl,bl
+sub cl,48
+mov dl,cl
+mov ah,2
+int 21h
+main endp
+end main
+7)
+.data
+.code 
+main proc
+mov ah,1
+int 21h
+sub al,48
+mov bl,al
+mov ah,1
+int 21h
+sub al,48
+mov cl,al
+sub bl,cl
+add bl,48
+mov dl,bl
+mov ah,2
+int 21h
+main endp
+end main

@@ -1,0 +1,256 @@
+1)
+.data
+inp db 'Print 0 to 9: $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+mov cx,10
+mov ah,2
+mov dl,48
+top:
+int 21h
+add dl,1
+loop top
+main endp
+end main
+2)
+.data
+inp db 'ALL Ascii value 0-256: $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+mov cx,256
+mov ah,2
+mov dl,0
+top:
+int 21h
+add dl,1
+loop top
+main endp
+end main
+3)
+.data
+inp db 'Print All upper case letters: $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+mov cx,26
+mov ah,2
+mov dl,65
+top:
+int 21h
+add dl,1
+loop top
+main endp
+end main
+4)
+.data
+inp db 'Print All lower case letters: $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+mov cx,26
+mov ah,2
+mov dl,65
+add dl,32
+top:
+int 21h
+add dl,1
+loop top
+main endp
+end main
+5)
+.data
+inp db 'Print All upper case letters in reverse order: $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+mov cx,26
+mov ah,2
+mov dl,90
+top:
+int 21h
+sub dl,1
+loop top
+main endp
+end main
+6)
+.data
+inp db 'Print All lower case letters in reverse order: $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+mov cx,26
+mov ah,2
+mov dl,90
+add dl,32
+top:
+int 21h
+sub dl,1
+loop top
+main endp
+end main
+7)
+.data
+inp db 'Input A Character: $'
+ouup db 'It is not upper case letter $'
+oup db 'It is a upper case letter $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+mov ah,1
+int 21h
+MOV BL,AL
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+cmp bl,'A'
+JL exit
+cmp bl,'Z'
+JG exit
+LEA DX,oup
+MOV AH,9
+INT 21H
+mov ah,2
+mov dl,bl
+int 21h
+jmp break
+exit:
+LEA DX,ouup
+MOV AH,9
+INT 21H
+jmp break
+break:
+main endp
+end main
+8)
+.data
+inp db 'Input A Character: $'
+ouup db 'It is not lower case letter $'
+oup db 'It is a lower case letter $'
+.code
+main proc
+MOV AX,@DATA
+MOV DS,AX
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+LEA DX,inp
+MOV AH,9
+INT 21H
+mov ah,1
+int 21h
+MOV BL,AL
+MOV AH,2;PRINT NEWLINE
+MOV DL,10D
+INT 21H
+MOV AH,2;CARRIAGE RETURN
+MOV DL,13D
+INT 21H
+cmp bl,'a'
+JL exit
+cmp bl,'z'
+JG exit
+LEA DX,oup
+MOV AH,9
+INT 21H
+mov ah,2
+mov dl,bl
+int 21h
+jmp break
+exit:
+LEA DX,ouup
+MOV AH,9
+INT 21H
+jmp break
+break:
+main endp
+end main
